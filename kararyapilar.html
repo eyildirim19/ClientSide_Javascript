@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            var num1=1;
+            var num2=2;
+            if(num1>num2){
+                console.log("num 1 büyük");
+            }
+            else{
+                console.log("num 2 büyük");
+            }
+            // alert("mesaj"); ekrana mesaj verir...
+            // prompt("bir değer giriniz") => ekrandan değer almak için kullanılır
+           var deger= prompt("bir değer giriniz");
+           console.log("girilen deger " + deger);
+           //debugger; // debug mode...
+            if(deger=="1"){
+                console.log("pazartesi");
+            }
+            else if(deger=="2")
+            {
+                console.log("Salı");
+            }
+            else if(deger=="3"){
+                console.log("Çarşamba");
+            }
+            else{
+                console.log("Diğer günler");
+            }
+
+            switch(deger)
+            {
+                case "1":
+                    console.log("Pazartesi");
+                    break;
+                case "2":
+                    console.log("Salı");
+                    break;
+                case "3":
+                    console.log("Çarşamba");
+                    break;
+                default:
+                    console.log("Diğer Günler");
+                    break;
+            } 
+    </script>
+
+     <script>
+        var s1,s2,result;
+        s1 = prompt("1. Sayıyı giriniz");
+        s2 = prompt("2. Sayıyı giriniz");
+        //isNaN(1); // false
+        //isNan("1"); // false
+        //isNan("a"); // true;
+        //if(isNaN(s1)==false && isNaN(s2)==false)
+        if(!isNaN(s1) && !isNaN(s2)){
+            // parseInt => değer sayısal formatta değilse nan,  değerin ilk değeri numeric ise sadece ilk değeri dönüştürür
+            // Number => değer sayısal formatta değilse nan döner...
+            //result = parseInt(s1) + parseInt(s2);
+            result = Number(s1) + Number(s2);
+            console.log("işlem sonucu =" + result);
+        }
+        else{
+            console.log("değerler numeric değil");
+        }
+    </script>
+</head>
+<body> 
+</body>
+</html>
