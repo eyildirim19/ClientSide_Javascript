@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // setTimeout => belirtilen süre'den sonra komutu(lar) çalıştırır..
+        setTimeout(function(){
+            alert("Merhaba");
+        },3000);
+        
+       // setInterval => timer (zamanlayıcı) gibi çalışır. belirtilen süre içerisinde sürekli functionı tetikler...
+        setInterval(function(){
+                console.log("Merhaba");
+        },3000);
+        function Yazdir(){
+            var i=1;
+            var interval = setInterval(function(){
+                    i++;
+                    document.getElementById("mesaj").innerHTML = i;
+
+                    if(i==10){
+                        clearInterval(interval); // interval'i sonlandır....
+                    }
+            },1000);
+        }
+    </script>
+</head>
+<body onload="Yazdir()"> 
+    <h1 id="mesaj"></h1>
+</body>
+</html>

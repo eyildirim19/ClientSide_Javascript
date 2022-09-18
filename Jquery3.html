@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/jquery-3.6.1.js"></script>
+    <script>
+            // not :  jquery selector ile css selectorler aynıdır...
+            $(document).ready(function(){ 
+                var classList = $(".text"); // text class isimli elementleri yakala
+                for(var i=0; i<classList.length; i++){
+                    $(classList[i]).html(i); // i. elemente değer set et...
+                }
+                var j=0;
+                setInterval(function(){
+                    
+                    if(j> $(".text").length){ // eğer j büyükse elementlern lengthinden
+                        j=0; // j'yi sıfırla....
+                    }
+                    var textElement = $(".text")[j]; // j. elemeni yakala
+                    // $(textElement).hide(); // elementi gizle...
+                    $(textElement).fadeOut();
+
+                    setTimeout(function(){
+                        // $(textElement).show(); // elementi göster... 
+                        $(textElement).fadeIn(); // elementi göster... 
+                    },1000); // 1 saniye sonra tekrar göster...
+                    j++; // j'yi arttır...
+                },2000);
+            });
+    </script>
+</head>
+<body>
+    <h1 class="text"></h1>
+    <h1 class="text"></h1>
+    <h1 class="text"></h1>
+    <h1 class="text"></h1>
+    <h1 class="text"></h1>
+    <h1 class="text"></h1>
+</body>
+</html>

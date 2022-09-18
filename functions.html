@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // metotlara benzer
+        function Mesaj(){
+            console.log("Merhaba");
+        }
+
+        // paramatre alan foksiyon
+        function Mesaj2(ad){
+                console.log("Merhaba " + ad);
+        }
+
+        //geriye değer döndüren fonksiyon
+        function DegerDonen(){
+            return "Merhaba";
+        }
+
+        function DegerDonen1(){
+            return;
+        }
+
+        function Topla(s1,s2){
+            return s1+s2;
+        }
+
+        // 3 farklı sayıdan en büyüğünü bulup dönen fonksyionu yazınız
+        function Buyuk(s1,s2,s3){
+            var nums=new Array(s1,s2,s3);
+         
+            var enb=nums[0];
+            for(var i=1; i < nums.length; i++){
+                if(nums[i] > enb)
+                {
+                    enb=nums[i];
+                }
+            }
+            return enb;
+        }
+
+        function Test(n1,n2,n3){
+               var result = Buyuk(n1,n2,n3);
+               alert(result);
+        }
+    </script>
+
+</head>
+<body>
+        <input type="button" value="Tıkla" onclick="Test(3,5,1)" />
+        <br />
+        <input type="button" value="Tıkla 1" onclick="Mesaj()" />
+</body>
+</html>
